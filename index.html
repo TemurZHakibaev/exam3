@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <form action="" id="form">
+      <h2 class="wrapper-title">Pizza order</h2>
+
+          <span class="span1">Ваше имя должно быть не менее 4 букв</span>
+          <input id="imya" class="inp" type="text" name="user_name" required placeholder="Введите ваше имя..." />
+          <span class="span2">Ваш номер должен быть 9 цифр</span>
+          <input id="nomer" class="inp" type="number" name="user_phone" placeholder="Введите ваш номер..." required/>
+          <input class="inp" type="email" name="user_email" placeholder="Введите ваш E-mail" required/>
+
+      <div class="form-select-block">
+        <label for="select" class="form-select-label">Dough thickness:</label>
+        <select id="select" class="form-select" name="thikness">
+          <option selected disabled>none</option>
+          <option data-price="10" value="thin" class="select__option">Тонкая</option>
+          <option data-price="12" value="medium" class="select__option">Средняя</option>
+          <option data-price="15" value="thick" class="select__option">Толстая</option>
+        </select>
+      </div>
+      <h4 class="form__title">Kattaligi</h4>
+
+      <div class="size-wrapper">
+        <input data-price="10" value="25" type="radio" class="size-wrapper__input" name="size" id="small-size" >
+        <label for="small-size" class="size-wrapper__label">25sm</label>
+
+        <input data-price="12" value="30" type="radio" class="size-wrapper__input" name="size" id="normal-size" >
+        <label for="normal-size" class="size-wrapper__label">30sm</label>
+
+        <input data-price="15" value="35" type="radio"  class="size-wrapper__input" name="size" id="big-size">
+        <label for="big-size" class="size-wrapper__label">35sm</label>
+      </div>
+
+      
+      
+      <h3 class="title">On Pizza:</h3>
+      <div class="checkbox-wrapper">
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Pomidor" data-add="Pomidor" id="tomatoes" class="hold__input" >
+          <label for="tomatoes" class="hold__label">Tomato</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Turkey meat" data-add="Tuzlangan bodring" id="pickles"class="hold__input"> 
+          <label for="pickles" class="hold__label">Turkey meat</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Pickled cucumber" data-add="Kurka go'shti" id="meat" class="hold__input">
+          <label for="meat" class="hold__label">Pickled cucumber</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Qo'ziqorin" value="Mushroom" id="mushroom" class="hold__input" >
+          <label for="mushroom" class="hold__label">Mushroom</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Zaytun" data-add="Ollive" id="olive" class="hold__input" >
+          <label for="olive" class="hold__label">Ollive</label>
+        </div>
+
+        <div class="hold">
+          <input data-price2="5" type="checkbox" name="add" value="Horse meat" data-add="Qazi" id="sausage" class="hold__input">
+          <label for="sausage" class="hold__label">Horse meat</label>
+        </div>
+      </div>
+
+      <div class="checkbox-wrapper">
+        <div class="hold">
+            <input data-price1="3" value="Achchiq" type="checkbox" id="bitter" class="hold__inputt ">
+            <label for="bitter" class="hold__label">Pepper</label>
+        </div>
+        
+        <div class="hold">
+            <input data-price1="3" value="калбасы" type="checkbox" id="sausages" class="hold__inputt">
+            <label for="sausages" class="hold__label">Sausages</label>
+        </div>
+    </div>
+      <div class="btn-block">
+        <button class="btn" type="submit">Save</button>
+      </div>
+      <div class="Info">
+        <ul id="list"></ul>
+        <!-- <ul id="includes"> -->
+        </ul>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal">
+    <div class="modal_window">
+      <p>Ваш заказ принят &#10004;</p>
+      <!-- <button id="close-btn">x</button> -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
